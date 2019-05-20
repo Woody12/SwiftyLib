@@ -11,8 +11,11 @@ import XCTest
 
 class SwiftyLibTests: XCTestCase {
 
+	var swiftyLib: SwiftyLib!
+
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+		swiftyLib = SwiftyLib()
     }
 
     override func tearDown() {
@@ -24,6 +27,14 @@ class SwiftyLibTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+	func testAdd() {
+		XCTAssertEqual(swiftyLib.add(a: 1, b: 1), 2)
+	}
+	
+	func testMinus() {
+		XCTAssertEqual(swiftyLib.sub(a: 2, b: 1), 1)
+	}
+	
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
