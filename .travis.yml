@@ -12,4 +12,4 @@ script:
 after_success:
   - slathe
   - bash <(curl -s https://codecov.io/bash) -t 8289490f-dd83-46d8-ac57-d8bf018ce790r
-  - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
+ # - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
